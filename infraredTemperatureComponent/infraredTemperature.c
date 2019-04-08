@@ -259,11 +259,11 @@ int reset_flags(uint8_t value)
  * @param float[64],dst value
  * @return 0 if success
  * */
-void ma_infraredTemperature_read_pixel_temperature(double *pixel_data)
+void ma_infraredTemperature_read_pixel_temperature(double *pixel_data, size_t *data_len)
 {
 	uint8_t val_l=0,val_h=0;
 	uint16_t value=0;
-	for(int i = 0; i < PIXEL_NUM; i++)
+	for(int i = 0; i < *data_len; i++)
  	{
 		I2C_read_byte(TEMPERATURE_REG_ADDR_L+2*i, &val_l);
 		I2C_read_byte(TEMPERATURE_REG_ADDR_H+2*i, &val_h);
