@@ -1,0 +1,18 @@
+//--------------------------------------------------------------------------------------------------
+/**
+ * Init the Infared Temperature.
+ */
+//--------------------------------------------------------------------------------------------------
+FUNCTION Init();
+
+/**
+ * @Description
+ *	Get device id.
+ * @parameter
+ *	deviceId: Output 12 bytes ID.
+ * @return
+ *	A pointer to device ID (12 bytes).
+ **/
+FUNCTION read_pixel_temperature(double pixel_data[64] OUT);
+
+FUNCTION Init();
